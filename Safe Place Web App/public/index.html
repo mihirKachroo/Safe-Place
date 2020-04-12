@@ -183,7 +183,8 @@
 
                 <!-- Location Section Content-->
                 <div class="form-group">
-                                    <p id="demo"></p>
+
+<p id="demo"></p>
 <button class="btn btn-xl btn-outline-light" onclick="getLocation()">Get Location</button>
 
                 <script>
@@ -197,9 +198,13 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
+var globalVariable={
+       lat: 'position.coords.latitude'
+    };
+   x.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 }
+   
 </script>
 
                 </div>
