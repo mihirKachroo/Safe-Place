@@ -1,49 +1,318 @@
 {
 	"html_attributions": [],
 	"next_page_token": "CpQCDwEAAJwdqLU_q4CMC9j-DOFIiwmwpP8ICAF_lHHKpWrNLfYsLS0hubKFTbau5sp7Tc_vC2bftXqZSRfq4uMk34-nE1f3weBRv77ZvsUhQn1MvJCfW6pNFA6zrDP_lPLBQZVrGVePIGhW8g485WnZdAHUyKpr4jjJ6hiOh2R6MxVBTYHyRuy5mDa-NGx4zQXDsHGSejOPH6BmPUoyfb-2MmRo1kcYABkBZRAaXpDmTtoXLmX8GxELbMOOAjEJ8Vzxdk-4GQkzoDYB1YwHBR1JXzxlawX0DdUyaJKjLWGjvt8GOwF8d9KVTF0r528jDCheFjvRgxOGMeYq1IrUx9lBofHH4sAX2plD6BGumN40mdBkDKVMEhC8pyLxL6t51mflBEc_WkF6GhTsH0kHwldrZYDnyUZ78TU9zeiiqg",
-	"results": [{
-			"formatted_address": "3818 Sunset Blvd, Los Angeles, CA 90026, USA",
-			"geometry": {
-				"location": {
-					"lat": 34.091158,
-					"lng": -118.2795188
+	"results":[
+		{
+			"id": "0QfJ5ZEPFoDSunsGtyZc",
+			"Address": {
+				"stringValue": "617 W 7th St, Los Angeles, CA 90017",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Walgreens",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.048239,
+					"longitude": -118.25718
 				},
-				"viewport": {
-					"northeast": {
-						"lat": 34.09258172989272,
-						"lng": -118.2780556701073
-					},
-					"southwest": {
-						"lat": 34.08988207010728,
-						"lng": -118.2807553298927
-					}
-				}
+				"valueType": "geoPointValue"
 			},
-			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
-			"id": "1113d3dd7339f965caae39387dd808a9e877bc2e",
-			"name": "Flore Vegan",
-			"opening_hours": {
-				"open_now": false,
-				"weekday_text": []
+			"numOfPeople": {
+				"integerValue": "7",
+				"valueType": "integerValue"
 			},
-			"photos": [{
-				"height": 2336,
-				"html_attributions": [
-					"<a href=\"https://maps.google.com/maps/contrib/100540448898812651487/photos\">Roman Roze</a>"
-				],
-				"photo_reference": "CmRaAAAA69UVwaJnUQXQUSSX9IfB3b29opNIohkexsGAGoHTD5Lyg24lhpBtaiNlrgihstR-k7Su9Vgbc8-eE5qHEdeLVY1QTfiuyS9TPp3e2GMM_grW2FtrgrFQGtMJSeJ336cPEhCVHYfFzoOgrrKdXlk34rJiGhSXSv_XG1q1CtOrWJjWQrxJmLvIPg",
-				"width": 3504
-			}],
-			"place_id": "ChIJj62e80jHwoARusJT4mjohWw",
-			"price_level": 2,
-			"rating": 4.6,
-			"reference": "CmRbAAAAM9_YQ6Dt9T69zucczidzOd6HU2vmzaXvTG-lJ89KyBlJVBJ0aEfar2Exre4iDWKHjExUshYSpAXEzA-YqotVnOt4XznKY_vkD520XK5nzFz5v5IefUe6FDBqZPzYlxRDEhAgQvwzNjwC49WWlyoMKza5GhS6r-VIl1lXdMl_JEW67yL7fPkZdg",
-			"types": [
-				"restaurant",
-				"food",
-				"point_of_interest",
-				"establishment"
-			]
+			"squareFeet": {
+				"integerValue": "13520",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "1THW7XJcpC1dmJexOMvO",
+			"Address": {
+				"stringValue": "3245 Casitas Ave, Los Angeles, CA 90039",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Momed",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.116144,
+					"longitude": -118.251273
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "10",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "5000",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "9BXToZZIVgxjbGoHWdpx",
+			"Address": {
+				"stringValue": "2021 W 3rd St, Los Angeles, CA 90057",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "T. G. Express",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.063276,
+					"longitude": -118.271764
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "9",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "4720",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "FA87R16kkeJSyLFMaA6C",
+			"Address": {
+				"stringValue": "3801 Pelandale Ave, Modesto, CA 95356",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Costco Wholesale",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 37.707143,
+					"longitude": -121.069192
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "6",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "1450",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "OU790Kap8VE2M2Lz0xQc",
+			"Address": {
+				"stringValue": "963 W Badillo St, Covina, CA 91722",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "The Home Depot",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.088702,
+					"longitude": -117.91038
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "13",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "15000",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "VHx6rKlZQmzkVc7MiKTl",
+			"Address": {
+				"stringValue": "815 W Las Tunas Dr, San Gabriel, CA 91776",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Golden Deli Restaurant",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.102971,
+					"longitude": -118.111754
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "6",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "5045",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "XkZdxEkwfm2RE1zgkWgK",
+			"Address": {
+				"stringValue": "5970 San Felipe Rd, Hollister, CA 95023",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Dunneville Café & Market",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 36.941276,
+					"longitude": -121.411462
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "9",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "4780",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "ZPFapovMPvMRhHuVsdkm",
+			"Address": {
+				"stringValue": "12746 W Jefferson Blvd, Playa Vista, CA 90094",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Whole Foods Market",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 33.977176,
+					"longitude": -118.417584
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "17",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "30000",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "b6c7kz7nQJneFoAu7XL9",
+			"Address": {
+				"stringValue": "114 E 2nd St, Los Angeles, CA 90012",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "RedBird",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.050656,
+					"longitude": -118.243958
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "11",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "5100",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "feo9ad36gBbdkmjFhiGz",
+			"Address": {
+				"stringValue": "200 S Los Angeles St, Los Angeles, CA 90012",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "7-Eleven",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.049865,
+					"longitude": -118.243318
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "3",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "2750",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "oFwvlLlUW0BUmemJhKs9",
+			"Address": {
+				"stringValue": "4601 Firestone Blvd, South Gate, CA 90280",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "In-N-Out Burger",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 33.953327,
+					"longitude": -118.188299
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "4",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "4200",
+				"valueType": "integerValue"
+			}
+		},
+		{
+			"id": "zM2VudPVKy6YiQWiFmx3",
+			"Address": {
+				"stringValue": "26471 Carl Boyer Dr, Santa Clarita, CA 91350",
+				"valueType": "stringValue"
+			},
+			"Name": {
+				"stringValue": "Walmart",
+				"valueType": "stringValue"
+			},
+			"geo": {
+				"geoPointValue": {
+					"latitude": 34.414104,
+					"longitude": -118.506172
+				},
+				"valueType": "geoPointValue"
+			},
+			"numOfPeople": {
+				"integerValue": "23",
+				"valueType": "integerValue"
+			},
+			"squareFeet": {
+				"integerValue": "40000",
+				"valueType": "integerValue"
+			}
 		}
 	],
 	"status": "OK"

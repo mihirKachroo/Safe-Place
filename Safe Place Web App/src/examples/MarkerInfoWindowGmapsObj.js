@@ -10,22 +10,19 @@ import LOS_ANGELES_CENTER from '../userlocation';
 const getInfoWindowString = place => `
     <div>
       <div style="font-size: 16px;">
-        ${place.name}
+        ${place.Name.stringValue}
       </div>
       <div style="font-size: 14px;">
         <span style="color: grey;">
-        ${place.rating}
+        Danger Rating: 
         </span>
-        <span style="color: orange;">${String.fromCharCode(9733).repeat(Math.floor(place.rating))}</span><span style="color: lightgrey;">${String.fromCharCode(9733).repeat(10 - Math.floor(place.rating))}</span>
+        <span style="color: orange;">${String.fromCharCode(9733).repeat(7-Math.floor(place.squareFeet.integerValue / place.numOfPeople.integerValue * 3.14 / 1000))}</span><span style="color: lightgrey;">${String.fromCharCode(9733).repeat(3+Math.floor(place.squareFeet.integerValue / place.numOfPeople.integerValue * 3.14 / 1000))}</span>
       </div>
-      <div style="font-size: 14px; color: grey;">
-        ${place.types[0]}
-      </div>
-      <div style="font-size: 14px; color: grey;">
-        ${'$'.repeat(place.price_level)}
+      <div style="font-size.: 14px; color: grey;">
+        ${place.Address.stringValue}
       </div>
       <div style="font-size: 14px; color: green;">
-        ${place.opening_hours.open_now ? 'Open' : 'Closed'}
+        ${'Open'}
       </div>
     </div>`;
 
@@ -37,8 +34,8 @@ const handleApiLoaded = (map, maps, places) => {
   places.forEach((place) => {
     markers.push(new maps.Marker({
       position: {
-        lat: place.geometry.location.lat,
-        lng: place.geometry.location.lng,
+        lat: place.geo.geoPointValue.latitude,
+        lng: place.geo.geoPointValue.longitude,
       },
       map,
     }));
