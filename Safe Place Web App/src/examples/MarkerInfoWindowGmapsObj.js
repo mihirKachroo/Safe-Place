@@ -5,7 +5,7 @@ import isEmpty from 'lodash.isempty';
 import GoogleMap from '../components/GoogleMap';
 
 // consts: [34.0522, -118.2437]
-import LOS_ANGELES_CENTER from '../la_center';
+import LOS_ANGELES_CENTER from '../userlocation';
 
 const getInfoWindowString = place => `
     <div>
@@ -16,7 +16,7 @@ const getInfoWindowString = place => `
         <span style="color: grey;">
         ${place.rating}
         </span>
-        <span style="color: orange;">${String.fromCharCode(9733).repeat(Math.floor(place.rating))}</span><span style="color: lightgrey;">${String.fromCharCode(9733).repeat(5 - Math.floor(place.rating))}</span>
+        <span style="color: orange;">${String.fromCharCode(9733).repeat(Math.floor(place.rating))}</span><span style="color: lightgrey;">${String.fromCharCode(9733).repeat(10 - Math.floor(place.rating))}</span>
       </div>
       <div style="font-size: 14px; color: grey;">
         ${place.types[0]}
