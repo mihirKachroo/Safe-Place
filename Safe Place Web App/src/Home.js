@@ -11,9 +11,11 @@ const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background: #5cbd9d;
+  background: #fff;
   width: 100vw;
-  height: 20vh;
+  height: 15vw;
+justify-content: center;
+  align-items: center;
 `;
 
 const List = styled.ul`
@@ -21,7 +23,6 @@ const List = styled.ul`
   flex-direction: column;
   width: 500px;
   padding: 15px;
-  border: 1px solid #d8d8d8;
   list-style: none;
   text-align: left;
 `;
@@ -31,8 +32,8 @@ const ListItem = styled.li`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #7f7f7f;
+  background: #5cbd9d;
+  border-bottom: 1px solid #fff;
   cursor: pointer;
 
   &:last-child {
@@ -43,7 +44,11 @@ const ListItem = styled.li`
 const StyledLink = styled(Link)`
   width: 100%;
   padding: 15px 15px 15px 0;
-  color: #000000;
+  color: #fff;
+  text-size: 
+    font-weight: 400;
+  font-size: 2rem;
+
   text-decoration: none;
   text-align: center;
 `;
@@ -52,7 +57,6 @@ const defaultPath = process.env.REACT_APP_BASE_PATH;
 
 const Home = () => (
   <Wrapper>
-    <h1>Safe Place</h1>
     <List>
       <ListItem>
         <StyledLink to={`${defaultPath}marker-info-window-gmaps-obj`}>View the Map</StyledLink>

@@ -2001,6 +2001,7 @@ pre code {
   border: 0.125rem solid #ced4da;
   border-radius: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-align: center;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control {
@@ -2123,6 +2124,8 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+      text-align: center;
+
 }
 
 .form-text {
