@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  width: 100vw;
-  height: 100vh;
+
 `;
 
 const App = ({ children }) => (

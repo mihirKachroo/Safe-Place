@@ -12,6 +12,8 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   background: #5cbd9d;
+  width: 100vw;
+  height: 20vh;
 `;
 
 const List = styled.ul`

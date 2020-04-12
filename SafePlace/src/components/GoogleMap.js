@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import GoogleMapReact from 'google-map-react';
 
 const Wrapper = styled.main`
-  width: 100%;
-  height: 100%;
+width: 100vw;
+  height: 100vh;
+
 `;
 
 const GoogleMap = ({ children, ...props }) => (
