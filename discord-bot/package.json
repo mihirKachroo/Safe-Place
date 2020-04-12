@@ -1,0 +1,13 @@
+{
+    "name": "area-checker",
+    "version": "1.0.0",
+    "description": "It's a thing",
+    "main": "bot.js",
+    "author": "The squad",
+    "dependencies": {
+        "discord.js": "^11.6.4",
+        "dotenv": "^8.2.0",
+        "firebase": "^7.14.0",
+        "firebase-admin": "^8.10.0"
+    }
+}
