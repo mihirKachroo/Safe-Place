@@ -1,6 +1,6 @@
 $(function() {
 
-  $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+  $("#SafePlaceForm input,#SafePlaceForm textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
@@ -20,7 +20,7 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "contact_me.php",
+        url: "SafePlace_me.php",
         type: "POST",
         data: {
           name: name,
@@ -39,7 +39,7 @@ $(function() {
           $('#success > .alert-success')
             .append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#SafePlaceForm').trigger("reset");
         },
         error: function() {
           // Fail message
@@ -49,7 +49,7 @@ $(function() {
           $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
           $('#success > .alert-danger').append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#SafePlaceForm').trigger("reset");
         },
         complete: function() {
           setTimeout(function() {

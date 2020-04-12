@@ -1,0 +1,22 @@
+{
+    "functions": {
+      "predeploy": [
+        "npm --prefix ./functions/ run lint",
+        "npm --prefix ./functions/ run build"
+      ]
+    },
+    "hosting": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "https://titanhack-covid-19-store.appspot.com/api/v1/**",
+          "function": "webApi" 
+        }
+      ]
+    }
+  }
