@@ -5,6 +5,12 @@ const config = require("./config.json");
 let latitude = 34.0522;
 let longitude = -118.2437;
 
+let name;
+let address;
+let geo;
+let squareFeet;
+let numOfPeople;
+let safe;
 
 // import settings
 
@@ -37,6 +43,9 @@ bot.on('message', msg => {
         msg.author.send(`Here are the commands:
         enter [latitude] [longitude] - enter your latitude and longitude coordinates (We are still experimenting with this so please don't change it for now as it may mess up the data we currently have)
         check - sends request to check the 5 closest stores according to your latitude and longitude coordinates
+    If you don't see a store you're looking for, enter the information using the 'set' command:
+        set [name of store] [latitude] [longitude] [number of people inside] [square feet of store] [address] - allows you to manually enter information of a store that you go to.
+        **IMPORTANT TO PUT IN ORDER OR THE STORE WILL GET INCORRECT INFORMATION**
         `)
     }
 
@@ -48,11 +57,6 @@ bot.on('message', msg => {
     }
 
     if (command == "check") {
-        let name;
-        let address;
-        let geo;
-        let squareMeters;
-        let numOfPeople;
 
         db.collection('SafePlace').get().then((snapshot) =>{
             snapshot.docs.forEach(doc => {
@@ -62,20 +66,70 @@ bot.on('message', msg => {
                 geo = doc.data().geo;
                 squareFeet = doc.data().squareFeet;
                 numOfPeople = doc.data().numOfPeople;
-                
+
+                if((squareFeet/numOfPeople) > 36 * Math.PI) {
+                    safe = "You are not likely to get COVID-19";
+                }
+                else if ((squareFeet/numOfPeople) < 36 * Math.PI){
+                    safe = "You are likely to get COIVD-19. Find another shop for now";
+                }
+                else{
+                    safe = "Something went wrong with the calculations."
+                }
+
                 let embed = new Discord.RichEmbed()
                 .setTitle(name)
                 .setTimestamp()
                 .addField("address", `${address}`)
                 .addField("square feet of store", squareFeet)
-                .addField("Number of people in store", numOfPeople);
+                .addField("Number of people in store", numOfPeople)
+                .addField("Likely hood of getting COVID-19?", safe);
     
-                
                 msg.channel.send(embed);
             })
         }) 
+
+    name = "";
+    address = "";
+    geo = "";
+    squareFeet = "";
+    numOfPeople = "";
+    
     }
+
+    if (command == "set") { 
+         for (let index = 4; index < args.length; index++) {
+            const element = args[index];
+            address += element + " ";
+        }
+
+        if(address.search("undefined") != -1) {
+            address = address.replace("undefined", "");
+        }
+
+
+        latitude = parseFloat(args[1]);
+        longitude = parseFloat(args[2]);
+
+        let data = {
+            Name: args[0],
+            geo: new admin.firestore.GeoPoint(latitude, longitude),
+            numOfPeople: parseInt(args[3]),
+            sqareFeet: parseInt(args[4]),
+            Address: address
+        };
+
+        console.log(data);
+        db.collection('SafePlace').doc().set(data);
+        address = "";
+        latitude = "";
+        longitude = "";
+    }
+
+
+
 })
+
 
 
 
