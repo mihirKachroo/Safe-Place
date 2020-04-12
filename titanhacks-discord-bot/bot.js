@@ -42,7 +42,8 @@ bot.on('message', msg => {
     if (command == "help") {
         msg.author.send(`Here are the commands:
         enter [latitude] [longitude] - enter your latitude and longitude coordinates (We are still experimenting with this so please don't change it for now as it may mess up the data we currently have)
-        check - sends request to check the 5 closest stores according to your latitude and longitude coordinates
+        check - sends request to check all stores in the database currently
+        search [name of store] - allows you to search for a specific store by its name
     If you don't see a store you're looking for, enter the information using the 'set' command:
         set [name of store] [latitude] [longitude] [number of people inside] [square feet of store] [address] - allows you to manually enter information of a store that you go to.
         **IMPORTANT TO PUT IN ORDER OR THE STORE WILL GET INCORRECT INFORMATION**
@@ -67,15 +68,9 @@ bot.on('message', msg => {
                 squareFeet = doc.data().squareFeet;
                 numOfPeople = doc.data().numOfPeople;
 
-                if((squareFeet/numOfPeople) > 36 * Math.PI) {
-                    safe = "You are not likely to get COVID-19";
-                }
-                else if ((squareFeet/numOfPeople) < 36 * Math.PI){
-                    safe = "You are likely to get COIVD-19. Find another shop for now";
-                }
-                else{
-                    safe = "Something went wrong with the calculations."
-                }
+                // calculates the danger rating of getting COVID-19
+
+                safe = 7-(squareFeet/numOfPeople*Math.PI/1000);
 
                 let embed = new Discord.RichEmbed()
                 .setTitle(name)
@@ -83,7 +78,7 @@ bot.on('message', msg => {
                 .addField("address", `${address}`)
                 .addField("square feet of store", squareFeet)
                 .addField("Number of people in store", numOfPeople)
-                .addField("Likely hood of getting COVID-19?", safe);
+                .addField("Likely hood of getting COVID-19?", Math.round(safe));
     
                 msg.channel.send(embed);
             })
@@ -124,6 +119,42 @@ bot.on('message', msg => {
         address = "";
         latitude = "";
         longitude = "";
+    }
+
+    if (command == "search") {
+        let bool;
+        db.collection('SafePlace').get().then((snapshot) =>{
+            snapshot.docs.forEach(doc => {
+                
+                name = doc.data().Name;
+                address = doc.data().Address;
+                geo = doc.data().geo;
+                squareFeet = doc.data().squareFeet;
+                numOfPeople = doc.data().numOfPeople;
+
+                if (name.toLowerCase() == args.toString().replace(',', ' ')) {
+                    bool = true;
+                        // calculates the danger rating of getting COVID-19
+
+                safe = 7-(squareFeet/numOfPeople*Math.PI/1000);
+
+                let embed = new Discord.RichEmbed()
+                .setTitle(name)
+                .setTimestamp()
+                .addField("address", `${address}`)
+                .addField("square feet of store", squareFeet)
+                .addField("Number of people in store", numOfPeople)
+                .addField("Likely hood of getting COVID-19?", Math.round(safe));
+    
+                msg.channel.send(embed);
+                }
+            })
+
+            if (!bool) {
+                msg.channel.send("The store you are looking for is not here. Maybe it's in another database.");
+            }
+            
+        }) 
     }
 
 
