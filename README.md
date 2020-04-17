@@ -1,7 +1,3 @@
-TitanHacks2020
-
-Youtube Demonstration: https://youtu.be/KDF-NUVtuoA
-
 Inspiration
 Due to the Coronavirus, going grocery shopping has become more dangerous and challenging than ever for the everyday person as it puts the heath and safety of themselves and their families at risk. So, we created the SafePlace which uses hardware, web app and chat bot to make shopping during COVID-19 safer and more efficient.
 
